@@ -31,7 +31,7 @@ jobs:
       with:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        password: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           docker pull ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
           docker stop fastapi-app || true
